@@ -18,5 +18,6 @@
 #
 ---
 # board: [waveshare_rp2040_zero]
-board: [rpi_pico]
-shield: [hexatana]
+include:
+  - board: [rpi_pico]
+    shield: [hexatana]
