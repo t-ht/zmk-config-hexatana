@@ -24,38 +24,38 @@
 };
 
 / {
-        combos {
-            compatible = "zmk,combos";
-            combo_esc {
-                timeout-ms = <50>;
-                key-positions = <0 1>;
-                bindings = <&kp ESC>;
-            };
-            combo_backspace {
-                timeout-ms = <50>;
-                key-positions = <16 17>;
-                bindings = <&kp BSPC>;
-            };
-            combo_delete {
-                timeout-ms = <50>;
-                key-positions = <17 18>;
-                bindings = <&kp DEL>;
-            };
-            combo_word_delete {
-                timeout-ms = <50>;
-                key-positions = <16 18>;
-                bindings = <&kp LA(BSPC)>;
-            };
-            combo_tab {
-                timeout-ms = <50>;
-                key-positions = <1 2>;
-                bindings = <&kp TAB>;
-            };
-            combo_toggle_os {
-                timeout-ms = <50>;
-                key-positions = <4 5>;
-                bindings = <&tog BASE_W>;
-            };
+    combos {
+        compatible = "zmk,combos";
+        combo_esc {
+            timeout-ms = <50>;
+            key-positions = <0 1>;
+            bindings = <&kp ESC>;
+        };
+        combo_backspace {
+            timeout-ms = <50>;
+            key-positions = <16 17>;
+            bindings = <&kp BSPC>;
+        };
+        combo_delete {
+            timeout-ms = <50>;
+            key-positions = <17 18>;
+            bindings = <&kp DEL>;
+        };
+        combo_word_delete {
+            timeout-ms = <50>;
+            key-positions = <16 18>;
+            bindings = <&kp LA(BSPC)>;
+        };
+        combo_tab {
+            timeout-ms = <50>;
+            key-positions = <1 2>;
+            bindings = <&kp TAB>;
+        };
+        combo_toggle_os {
+            timeout-ms = <50>;
+            key-positions = <4 5>;
+            bindings = <&tog BASE_W>;
+        };
     };
 
     macros {
@@ -70,19 +70,18 @@
         compatible = "zmk,keymap";
 
         BASE_M_layer {
-            label= "BASE_M"
+            label= "BASE_M";
 // -------------------------------------------------------------------------------------------------------------------------------
 // |    Q    |    W    |    F    |    P    |    B    |                         |    J    |    L    |    U    |    Y    |    ;    |
 // |    A    |    R    |    S    |    T    |    G    |                         |    M    |    N    |    E    |    I    |    O    |
 // |    Z    |    X    |    C    |    D    |    V    |                         |    K    |    H    |    ,    |    .    |    /    |
 //                     |   LGUI  |  LSHFT  | LOWER_M |                         | RAISE_M |  ENTER  |  L ALT  |
             bindings = <
-//    ╷           ╷           ╷           ╷           ╷           ╷   ╷           ╷           ╷           ╷           ╷           ╷
 
-       &kp Q       &kp W       &kp F       &kp P       &kp B           &kp J       &kp L       &kp U       &kp DM_Y    &SMM_SEMI
-       &mt LCTRL A &mt LALT R  &mt LGUI S  &mt LSHFT T &kp G           &kp M       &mt RSHFT N &mt RGUI E  &mt RALT I  &mt RCTRL O
-       &kp DM_Z    &kp X       &kp C       &kp D       &kp V           &kp K       &kp H       &SMM_COMMA  &SMM_DOT    &SMM_FSLH   
-                               &kp LGUI    &kp SPACE   &mo LOWER_M     &mo RAISE_M &kp RET     &kp LALT
+    &kp Q       &kp W       &kp F       &kp P       &kp B           &kp J       &kp L       &kp U       &kp DM_Y    &SMM_SEMI
+    &mt LCTRL A &mt LALT R  &mt LGUI S  &mt LSHFT T &kp G           &kp M       &mt RSHFT N &mt RGUI E  &mt RALT I  &mt RCTRL O
+    &kp DM_Z    &kp X       &kp C       &kp D       &kp V           &kp K       &kp H       &SMM_COMMA  &SMM_DOT    &SMM_FSLH   
+                            &kp LGUI    &kp SPACE   &mo LOWER_M     &mo RAISE_M &kp RET     &kp LALT
             >;
         };
     };
