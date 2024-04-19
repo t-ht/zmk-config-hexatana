@@ -84,5 +84,22 @@
                             &kp LGUI    &kp SPACE   &mo LOWER_M     &mo RAISE_M &kp RET     &kp LALT
             >;
         };
+
+        LOWER_M_layer {
+            label= "LOWER_M";
+// -------------------------------------------------------------------------------------------------------------------------------
+// |         |  HOME   |    UP   |   END   |         |                         |    %    |    7    |    8    |    9    |    =    |
+// |CTRL(LFT)|  LEFT   |  DOWN   |  RIGHT  |CTRL(RGT)|                         |    *    |    4    |    5    |    6    |    +    |
+// |         |  P UP   |         | P DOWN  |         |                         |    /    |    1    |    2    |    3    |    -    |
+//                     |   LGUI  |  LSHFT  |         |                         |    ,    |    .    |    0    |
+            bindings = <
+
+    &none       &kp HOME    &kp UP      &kp END     &none           &kp DM_PRCNT &kp N7     &kp N8      &kp N9      &kp DM_EQUAL
+    &kp DM_DL   &kp LEFT    &kp DOWN    &kp RIGHT   &kp DM_DR       &kp DM_STAR  &kp N4     &kp N5      &kp N6      &kp DM_PLUS
+    &none       &kp PG_UP   &none       &kp PG_DN   &none           &kp DM_SLASH &kp N1     &kp N2      &kp N3      &kp DM_MINUS
+                                &trans      &trans      &trans          &kp COMMA    &kp DOT    &kp N0      
+                        >;
+                };
+
     };
 };
