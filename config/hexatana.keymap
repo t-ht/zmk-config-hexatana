@@ -71,13 +71,12 @@
 
         BASE_M_layer {
             label= "BASE_M";
-// -------------------------------------------------------------------------------------------------------------------------------
-// |    Q    |    W    |    F    |    P    |    B    |                         |    J    |    L    |    U    |    Y    |    ;    |
-// |    A    |    R    |    S    |    T    |    G    |                         |    M    |    N    |    E    |    I    |    O    |
-// |    Z    |    X    |    C    |    D    |    V    |                         |    K    |    H    |    ,    |    .    |    /    |
-//                     |   LGUI  |  LSHFT  | LOWER_M |                         | RAISE_M |  ENTER  |  L ALT  |
+// --------------------------------------------------------------------------------------------------------------------
+// |    Q    |    W    |    F    |    P    |    B    |              |    J    |    L    |    U    |    Y    |    ;    |
+// |    A    |    R    |    S    |    T    |    G    |              |    M    |    N    |    E    |    I    |    O    |
+// |    Z    |    X    |    C    |    D    |    V    |              |    K    |    H    |    ,    |    .    |    /    |
+//                     |   LGUI  |  LSHFT  | LOWER_M |              | RAISE_M |  ENTER  |  L ALT  |
             bindings = <
-
     &kp Q       &kp W       &kp F       &kp P       &kp B           &kp J       &kp L       &kp U       &kp DM_Y    &SMM_SEMI
     &mt LCTRL A &mt LALT R  &mt LGUI S  &mt LSHFT T &kp G           &kp M       &mt RSHFT N &mt RGUI E  &mt RALT I  &mt RCTRL O
     &kp DM_Z    &kp X       &kp C       &kp D       &kp V           &kp K       &kp H       &SMM_COMMA  &SMM_DOT    &SMM_FSLH   
@@ -87,19 +86,33 @@
 
         LOWER_M_layer {
             label= "LOWER_M";
-// -------------------------------------------------------------------------------------------------------------------------------
-// |         |  HOME   |    UP   |   END   |         |                         |    %    |    7    |    8    |    9    |    =    |
-// |CTRL(LFT)|  LEFT   |  DOWN   |  RIGHT  |CTRL(RGT)|                         |    *    |    4    |    5    |    6    |    +    |
-// |         |  P UP   |         | P DOWN  |         |                         |    /    |    1    |    2    |    3    |    -    |
-//                     |   LGUI  |  LSHFT  |         |                         |    ,    |    .    |    0    |
+// --------------------------------------------------------------------------------------------------------------------
+// |         |  HOME   |    UP   |   END   |         |              |    %    |    7    |    8    |    9    |    =    |
+// |CTRL(LFT)|  LEFT   |  DOWN   |  RIGHT  |CTRL(RGT)|              |    *    |    4    |    5    |    6    |    +    |
+// |         |  P UP   |         | P DOWN  |         |              |    /    |    1    |    2    |    3    |    -    |
+//                     |   LGUI  |  LSHFT  |         |              |    ,    |    .    |    0    |
             bindings = <
-
     &none       &kp HOME    &kp UP      &kp END     &none           &kp DM_PRCNT &kp N7     &kp N8      &kp N9      &kp DM_EQUAL
     &kp DM_DL   &kp LEFT    &kp DOWN    &kp RIGHT   &kp DM_DR       &kp DM_STAR  &kp N4     &kp N5      &kp N6      &kp DM_PLUS
     &none       &kp PG_UP   &none       &kp PG_DN   &none           &kp DM_SLASH &kp N1     &kp N2      &kp N3      &kp DM_MINUS
-                                &trans      &trans      &trans          &kp COMMA    &kp DOT    &kp N0      
-                        >;
-                };
+                            &trans      &trans      &trans          &kp COMMA    &kp DOT    &kp N0      
+            >;
+        };
+
+        RAISE_M_layer {
+            label= "RAISE_M";
+// --------------------------------------------------------------------------------------------------------------------
+// |    °    |    &    |    "    |    [    |    \    |              |         |    ]    |    ü    |    '    |    §    |
+// |    ä    |    @    |    ß    |    (    |    !    |              |    #    |    )    |    €    |    $    |    ö    |
+// |         |    |    |    ~    |    {    |         |              |         |    }    |    ´    |    `    |         |
+//                     |         |         |   ADJ   |              |         |         |         |
+            bindings = <
+    &kp DM_DEG &kp DM_AMPS  &kp DM_DQT   &kp DM_LBKT &kp DM_BSLH    &none       &kp DM_RBKT &kp uuml     &kp DM_SQT   &kp DM_SECT
+    &kp auml   &kp DM_AT    &kp DM_SZ    &kp DM_LPAR &kp DM_EXCL    &kp DM_HASH &kp DM_RPAR &kp DM_EURO  &kp DM_DLLR  &kp ouml             
+    &none      &kp DM_PIPE  &kp DM_TILDE &kp DM_LBRC &none          &none       &kp DM_RBRC &kp DM_ACUTE &kp DM_GRAVE &none         
+                            &none        &none       &mo ADJ        &none       &none       &none 
+            >;
+        };
 
     };
 };
